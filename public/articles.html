@@ -62,51 +62,100 @@
     p {
       margin: 0 0 15px;
     }
+
+    h2 {
+      color: #1e40af;
+      margin-top: 25px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
   </style>
 </head>
 <body>
 
   <h1>Articles on Democracy</h1>
 
+  <!-- First Article -->
   <div class="article">
     <div class="title">The Significance of Democracy and Social Capital (Putnam, 2017)</div>
     <div class="content">
-      <p>The significance of democracy extends beyond national borders, influencing global interactions and relationships...</p>
-      <p>Putnam defines social capital as the networks, norms, and trust that help people cooperate and build strong communities...</p>
-      <p>He warns that the decline of social capital weakens democracy, reducing civic engagement and trust...</p>
-      <p>However, he believes it can be revived through community programs, education, and shared public spaces.</p>
+      <p>The significance of democracy extends beyond national borders, influencing global interactions and relationships. Democratic nations tend to build stronger alliances, fostering international cooperation and peace. As Robert Putnam (2017) asserts, “Democracies are more likely to engage in peaceful negotiations and trade partnerships” (p. 112). This assertion highlights how democratic governance not only benefits domestic stability but also contributes to a more harmonious international landscape.</p>
+
+      <p>In his seminal work, <em>Bowling Alone: The Collapse and Revival of the American Community</em>, Putnam investigates the decline of social capital in America and its profound implications for democracy and civic engagement. He defines social capital as the networks, norms, and trust that facilitate cooperation among individuals, underscoring its essential role in fostering community engagement and collective action.</p>
+
+      <h2>The Importance of Social Capital</h2>
+      <p>Putnam argues that social capital is crucial for a functioning democracy. It serves as the foundation for civic life, enabling individuals to collaborate effectively toward common goals. High levels of social capital correlate with increased political participation, greater community involvement, and enhanced public trust in government institutions. When citizens feel connected to their communities and trust one another, they are more likely to engage in democratic processes, such as voting and civic activism.</p>
+
+      <h2>Decline of Social Capital</h2>
+      <p>Putnam presents extensive empirical evidence demonstrating a significant decline in social capital over the past few decades. He meticulously analyzes data from various sources, including surveys and studies, to illustrate this troubling trend. His findings indicate a decrease in participation in community organizations, social clubs, and civic activities, which he attributes to several factors:</p>
+      <ul>
+        <li><strong>Increased Mobility:</strong> The rise of suburbanization and geographic mobility has led to weakened community ties.</li>
+        <li><strong>Technological Changes:</strong> Technology often replaces face-to-face interaction, weakening social engagement.</li>
+        <li><strong>Cultural Shifts:</strong> Growing individualism has led to a decline in collective activities and community life.</li>
+      </ul>
+
+      <h2>Implications for Democracy</h2>
+      <p>The decline of social capital undermines democratic institutions and civic participation, leading to political apathy and decreased trust. Putnam warns that this can create a feedback loop where civic disengagement becomes the norm.</p>
+
+      <h2>Revitalizing Social Capital</h2>
+      <p>Despite these challenges, Putnam remains optimistic about reviving social capital through grassroots initiatives, education, and community programs, such as:</p>
+      <ul>
+        <li><strong>Community Programs:</strong> Encouraging local engagement through volunteer groups and neighborhood associations.</li>
+        <li><strong>Educational Initiatives:</strong> Promoting civic education and community service in schools.</li>
+        <li><strong>Public Spaces:</strong> Investing in parks and community centers to foster interaction.</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>Putnam concludes that while the decline of social capital threatens democracy, renewed civic commitment can strengthen democratic foundations and create a more connected, resilient society.</p>
     </div>
   </div>
 
+  <!-- Second Article -->
   <div class="article">
     <div class="title">Leadership Challenges in Democratic Societies (Smith, 2020)</div>
     <div class="content">
-      <p>While democracy supports empowerment and stability, it can also lead to weak leadership and poor governance...</p>
-      <p>Smith explains that leaders face pressure from media, public opinion, and the need to balance competing interests...</p>
-      <p>He highlights the importance of accountability and informed citizens in maintaining effective governance...</p>
-      <p>Smith suggests reforms like civic education and fairer elections to improve leadership quality in democratic societies.</p>
+      <p>While modern democracy is vital for empowerment and global stability, it carries inherent challenges. One significant issue is the election of weak leaders, which can lead to poor governance and ineffective policies. As Smith (2020) notes, “The democratic process is vulnerable to the whims of the electorate; popularity does not equate to capability” (p. 78). In <em>Leadership in Democratic Societies: Challenges and Opportunities</em>, Smith explores the complexities and challenges of leadership within democratic frameworks, providing a comprehensive analysis of the dynamics at play.</p>
+
+      <h2>Examining the Complexities of Democratic Leadership</h2>
+      <p>Smith identifies several challenges that leaders in democratic societies encounter, including public opinion, media scrutiny, and the need to balance competing interests. These pressures often lead to short-term decision-making focused on popularity rather than long-term effectiveness. He also warns that populism can bring unqualified leaders to power who rely on emotional appeal rather than sound governance.</p>
+
+      <h2>The Role of Accountability in Governance</h2>
+      <p>Smith emphasizes accountability as vital for democratic leadership. Transparent governance and strong accountability mechanisms maintain public trust and ensure leaders act in citizens’ interests. Without accountability, corruption and disengagement can thrive. Smith also stresses the importance of an informed and engaged citizenry to promote effective leadership.</p>
+
+      <h2>Pathways to Enhancing Leadership Quality</h2>
+      <p>Despite challenges, Smith suggests several solutions to improve leadership in democracies, including:</p>
+      <ul>
+        <li><strong>Electoral Reforms:</strong> Enhancing transparency and reducing money’s influence in politics.</li>
+        <li><strong>Civic Engagement:</strong> Encouraging participation through town halls and public forums.</li>
+        <li><strong>Civic Education:</strong> Teaching critical thinking and active citizenship to youth.</li>
+      </ul>
+
+      <p>He concludes that strong leadership in democracy depends on active citizens, transparent governance, and education that empowers future generations to hold leaders accountable.</p>
     </div>
   </div>
 
   <script>
-    // Get all title elements
     const titles = document.querySelectorAll('.title');
 
     titles.forEach(title => {
       title.addEventListener('click', () => {
         const content = title.nextElementSibling;
 
-        // Toggle dropdown
+        // Close all others first
+        document.querySelectorAll('.content').forEach(c => {
+          if (c !== content) {
+            c.style.maxHeight = null;
+            c.classList.remove('open');
+          }
+        });
+
+        // Toggle this one
         if (content.style.maxHeight) {
           content.style.maxHeight = null;
           content.classList.remove('open');
         } else {
-          // Close others
-          document.querySelectorAll('.content').forEach(c => {
-            c.style.maxHeight = null;
-            c.classList.remove('open');
-          });
-          // Open this one
           content.style.maxHeight = content.scrollHeight + "px";
           content.classList.add('open');
         }
