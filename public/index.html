@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- ✅ Navbar -->
   <nav class="navbar">
     <div class="logo">NewWorld</div>
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
       <li><a href="articles.html">Articles</a></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
@@ -21,52 +22,33 @@
     </div>
   </nav>
 
+  <!-- ✅ Hero Section -->
   <header class="hero">
     <h1>The Importance of Modern Democracy</h1>
-    <p>“Democracy is more than just a system of government; it is a way of life that empowers citizens.” — Larry Diamond (2019)</p>
-    <button id="learnMoreBtn">Read More</button>
+    <p>
+      “Democracy is more than just a system of government; it is a way of life that empowers citizens.” 
+      — Larry Diamond (2019)
+    </p>
+    <button id="learnMoreBtn" onclick="window.location.href='articles.html'">Explore Articles</button>
   </header>
 
+  <!-- ✅ Short Intro Section -->
   <main>
     <section id="content" class="content-section">
-      <article>
-        <h2>The Importance of Modern Democracy</h2>
-        <p>
-          Modern democracy plays a crucial role in shaping societies and governance structures around the world. As societies evolve, the concept of democracy has transformed from a political system into a comprehensive way of life that empowers citizens. As Larry Diamond (2019) states, “Democracy is more than just a system of government; it is a way of life that empowers citizens” (p. 45). This statement encapsulates the essence of modern democracy, highlighting its significance beyond political frameworks and its impact on individual empowerment and societal engagement.
-        </p>
-
-        <h3>Empowerment Through Participation</h3>
-        <p>
-          At its core, modern democracy allows citizens to actively participate in governance. This participatory aspect is fundamental, granting individuals the right to voice their opinions, vote in elections, and influence decision-making processes. Engaging in governance fosters a sense of ownership and responsibility among citizens, making them invested in their communities.
-        </p>
-        <p>
-          Moreover, democratic systems encourage transparency and accountability. Elected leaders are held responsible for their actions, enabling citizens to remove ineffective or corrupt officials through regular elections. This dynamic empowers individuals and cultivates a culture of civic engagement where people advocate for their rights and the well-being of their communities.
-        </p>
-
-        <h3>Global Perspectives on Democracy</h3>
-        <p>
-          The significance of democracy extends beyond national borders. Democratic nations build stronger relationships with one another, fostering international cooperation and peace. As Robert Putnam (2017) explains, “Democracies are more likely to engage in peaceful negotiations and trade partnerships” (p. 112). This interconnectedness promotes global stability, as democratic countries typically share common values of human rights, rule of law, and respect for individual freedoms.
-        </p>
-        <p>
-          In contrast, countries resisting democratic governance often face isolation and conflict. The historical context of World War I and World War II serves as a stark reminder of the dangers posed by dictatorial regimes. These global conflicts highlighted how oppressive leadership can lead to widespread violence and suffering. In a modern context, the rise of authoritarianism in various regions emphasizes the importance of maintaining and promoting democratic values to prevent the repetition of such tragedies.
-        </p>
-
-        <h3>Challenges Within Democratic Systems</h3>
-        <p>
-          While modern democracy is vital for empowerment and global stability, it carries challenges. One significant issue is the election of weak leaders, which can lead to poor governance and ineffective policies. As Smith (2020) notes, “The democratic process is vulnerable to the whims of the electorate; popularity does not equate to capability” (p. 78). This vulnerability highlights the necessity for an informed and engaged citizenry.
-        </p>
-        <p>
-          Citizens must actively participate in the democratic process, not only during elections but also in ongoing community engagement. Staying informed about political issues, advocating for transparency, and holding leaders accountable for their actions is essential. An active citizenry is crucial for protecting the integrity of democratic systems and ensuring elected officials effectively address the needs and concerns of the populace.
-        </p>
-
-        <h3>Conclusion</h3>
-        <p>
-          In conclusion, modern democracy is essential for stability, international relations, and individual empowerment. It transcends being a mere system of governance; it represents a way of life that encourages active participation and accountability. While challenges in electing effective leaders exist, the benefits of democracy far outweigh the drawbacks. An informed and engaged citizenry is crucial for safeguarding freedom and equality, making modern democracy a fundamental aspect of a thriving society.
-        </p>
-      </article>
+      <h2>Welcome to New World</h2>
+      <p>
+        Discover insightful discussions and well-researched articles on democracy, leadership, and civic engagement.
+        Learn how democratic principles shape societies, promote freedom, and influence global peace.
+      </p>
+      <p>
+        Click below to start reading in-depth analyses by notable scholars such as 
+        <strong>Robert Putnam</strong> and <strong>Larry Diamond</strong>.
+      </p>
+      <button class="read-btn" onclick="window.location.href='articles.html'">Go to Articles</button>
     </section>
   </main>
 
+  <!-- ✅ Footer -->
   <footer>
     <p>© 2025 New World. All Rights Reserved.</p>
   </footer>
